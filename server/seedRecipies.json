@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Spaghetti Bolognese",
+    "ingredients": [
+      "spaghetti",
+      "ground beef",
+      "tomato sauce",
+      "onions",
+      "garlic"
+    ],
+    "instructions": "Cook spaghetti. Cook beef with onions and garlic. Add sauce. Combine.",
+    "cookingTime": "30 minutes",
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Chicken Curry",
+    "ingredients": ["chicken", "onions", "tomatoes", "spices", "coconut milk"],
+    "instructions": "Cook onions and spices. Add chicken. Add coconut milk and simmer.",
+    "cookingTime": 40,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Pancakes",
+    "ingredients": ["flour", "milk", "eggs", "sugar", "butter"],
+    "instructions": "Mix ingredients. Pour batter on pan. Flip and cook both sides.",
+    "cookingTime": 20,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Fried Rice",
+    "ingredients": ["rice", "vegetables", "soy sauce", "eggs", "garlic"],
+    "instructions": "Stir-fry garlic and veggies. Add rice and sauce. Stir in eggs.",
+    "cookingTime": 25,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Grilled Cheese Sandwich",
+    "ingredients": ["bread", "cheddar cheese", "butter"],
+    "instructions": "Butter bread. Add cheese. Grill until golden and crispy.",
+    "cookingTime": "10 minutes",
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Caesar Salad",
+    "ingredients": [
+      "romaine lettuce",
+      "croutons",
+      "parmesan",
+      "caesar dressing"
+    ],
+    "instructions": "Toss all ingredients together. Serve chilled.",
+    "cookingTime": "10 minutes",
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Tacos",
+    "ingredients": ["tortillas", "beef", "lettuce", "cheese", "salsa"],
+    "instructions": "Cook beef. Fill tortillas with ingredients. Serve warm.",
+    "cookingTime": 30,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Omelette",
+    "ingredients": ["eggs", "onion", "tomato", "cheese", "salt"],
+    "instructions": "Beat eggs. Cook with vegetables and cheese. Fold and serve.",
+    "cookingTime": 10,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Veggie Soup",
+    "ingredients": ["carrots", "potatoes", "peas", "onion", "broth"],
+    "instructions": "Boil vegetables in broth until tender. Season and serve.",
+    "cookingTime": 35,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "French Toast",
+    "ingredients": ["bread", "eggs", "milk", "sugar", "cinnamon"],
+    "instructions": "Dip bread in egg mix. Fry until golden brown.",
+    "cookingTime": 15,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Chili",
+    "ingredients": ["ground beef", "beans", "tomato", "onions", "chili powder"],
+    "instructions": "Cook all ingredients in a pot. Simmer and stir occasionally.",
+    "cookingTime": 60,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Mac and Cheese",
+    "ingredients": ["macaroni", "cheddar cheese", "milk", "butter", "flour"],
+    "instructions": "Boil pasta. Make cheese sauce. Mix and bake.",
+    "cookingTime": 30,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Butter Chicken",
+    "ingredients": ["chicken", "butter", "tomato puree", "cream", "spices"],
+    "instructions": "Cook chicken in butter. Add sauce and simmer.",
+    "cookingTime": 45,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Pasta Primavera",
+    "ingredients": ["pasta", "bell peppers", "zucchini", "olive oil", "garlic"],
+    "instructions": "Cook veggies and pasta. Toss with oil and garlic.",
+    "cookingTime": 25,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  },
+  {
+    "title": "Banana Smoothie",
+    "ingredients": ["banana", "milk", "honey", "ice"],
+    "instructions": "Blend all ingredients until smooth.",
+    "cookingTime": 5,
+    "imageUrl": "",
+    "createdBy": {
+      "$oid": "686ce2ec5e826b8e15926303"
+    }
+  }
+]
