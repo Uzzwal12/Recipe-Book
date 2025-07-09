@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const recipeRoutes = require("./routes/recipe");
@@ -10,7 +11,8 @@ const DB_URI = process.env.DB_URL;
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-
+app.use(cors());
+app.use("/upload", express.static("upload"));
 app.use("/api/users", authRoutes);
 app.use("/api", recipeRoutes);
 

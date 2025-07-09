@@ -4,9 +4,10 @@ async function createRecipe(req, res) {
   try {
     const data = {
       ...req.body,
+      ingredients: req.body.ingredients.split(",").map((i) => i.trim()),
+      imageUrl: req.file ? `/upload/${req.file.filename}` : "",
       createdBy: req.user.id,
     };
-    console.log(data);
     const recipe = await recipeService.createRecipe(data);
     res.status(201).json(recipe);
   } catch (err) {
@@ -18,7 +19,7 @@ async function getAllRecipes(req, res) {
   try {
     const { search, ingredient, maxTime, page, limit } = req.query;
 
-    const { recipes, total } = await recipeService.getAllRecipes({
+    const { recipes, total, totalPages } = await recipeService.getAllRecipes({
       page,
       limit,
       search,
@@ -30,6 +31,7 @@ async function getAllRecipes(req, res) {
       limit,
       total,
       recipes,
+      totalPages,
     });
   } catch (err) {
     res.status(500).json({ message: "Failed to fetch recipes" });
@@ -48,8 +50,15 @@ async function getSingleRecipe(req, res) {
 
 async function getUserRecipes(req, res) {
   try {
-    const recipes = await recipeService.getRecipesByUser(req.user.id);
-    res.json(recipes);
+    const { page, limit } = req.query;
+    const { recipes, total, totalPages } = await recipeService.getRecipesByUser(
+      {
+        userId: req.user.id,
+        page,
+        limit,
+      }
+    );
+    res.json({ recipes, total, totalPages });
   } catch (err) {
     res.status(500).json({ message: "Failed to fetch user recipes" });
   }
@@ -58,7 +67,6 @@ async function getUserRecipes(req, res) {
 async function updateRecipe(req, res) {
   try {
     const recipe = await recipeService.getRecipeById(req.params.id);
-    console.log(recipe);
     if (!recipe) return res.status(404).json({ message: "Recipe not found" });
 
     if (recipe.createdBy.toString() !== req.user.id.toString()) {
@@ -66,10 +74,24 @@ async function updateRecipe(req, res) {
         .status(403)
         .json({ message: "Unauthorized to update this recipe" });
     }
+    console.log(req.body);
+    const data = {
+      ...req.body,
+      ingredients: req.body.ingredients
+        .split(",")
+        .map((i) => i.trim())
+        .filter(Boolean),
+    };
 
-    const updated = await recipeService.updateRecipe(req.params.id, req.body);
+    // Only update image if new file uploaded
+    if (req.file) {
+      data.imageUrl = `/upload/${req.file.filename}`;
+    }
+
+    const updated = await recipeService.updateRecipe(req.params.id, data);
     res.json(updated);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ message: "Failed to update recipe" });
   }
 }
